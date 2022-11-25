@@ -38,9 +38,9 @@ def get_airports():
 
 
 if __name__ == '__main__':
-  if 'FIRST_RUN' not in os.environ:
-    add_initial_data()
-    os.environ['FIRST_RUN'] = 'FIRST_RUN'
+  # if 'FIRST_RUN' not in os.environ:
+  #   add_initial_data()
+  #   os.environ['FIRST_RUN'] = 'FIRST_RUN'
   
   app.run(debug=True,host='0.0.0.0')
 
