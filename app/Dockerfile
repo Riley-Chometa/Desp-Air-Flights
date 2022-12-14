@@ -19,7 +19,8 @@ RUN npm install
 # copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
 # build app
-RUN npm run build
+RUN mkdir /app/node_modules/.vite \
+    && chown -R node:node /app/node_modules/.vite
 
 # expose port for the server to communicate with the outside world
 EXPOSE 8080

@@ -1,10 +1,4 @@
-from flask import Flask, jsonify, request
-from flask_cors import CORS
-import search
-from search import find_path as fp
-from gdb.add_initial_data import add_initial_data
-from gdb.get_airports import get_airports as get_airports_gdb
-import os
+
 
 """ nope bout to work on some psych.
 -add_initial_data.py will add the airports and flight data to the gdb
@@ -38,9 +32,6 @@ def get_airports():
 
 
 if __name__ == '__main__':
-  # if 'FIRST_RUN' not in os.environ:
-  #   add_initial_data()
-  #   os.environ['FIRST_RUN'] = 'FIRST_RUN'
   
   app.run(debug=True,host='0.0.0.0')
 
